@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Eligibility</title>
+    <style>
+        body{
+            background-color: rgb(201, 40, 166);
+        }
+        h1{
+            text-align: center;
+            margin-top: 10%;
+            color: aliceblue;
+        }
+        label{
+            color: white;
+            text-shadow: brown;
+            font-weight: bold;
+            margin-left: 10%;
+        }
+        input{
+            background-color: aqua;
+            border: 1px solid white;
+        }
+        #sb{
+            margin-left: 10%;
+            margin-top: 6%;
+            color: green;
+            font-weight: bold;
+            border: transparent;
+            border-radius: 5px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 id="h12"> Check Vote Eligibility </h1><br><br>
+        <form action="" onsubmit="return voteEligible()">
+            <label for="age">Enter Age : </label><input type="number" name="ag" id="age"><br>
+            <input type="submit" value="submit" id="sb">
+        </form>
+    </div>
+    <script>
+        function voteEligible(){
+            let ag = document.getElementById("age").value;
+        if (ag>=18) {
+            alert("Your Are Eligible!");  
+        }
+        else
+        alert("Your Are Not Eligible");
+        }
+    </script>
+</body>
+</html>
